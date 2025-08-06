@@ -1,11 +1,11 @@
 import streamlit as st
-import pickle
+#import pickle
 import numpy as np
 import json
 
 # Load the trained model
-with open('banglore_home_prices_model.pickle', 'rb') as f:
-    model = pickle.load(f)
+import joblib
+model = joblib.load('model.joblib')
 
 # Load the column names (feature list)
 with open('columns.json', 'r') as f:
